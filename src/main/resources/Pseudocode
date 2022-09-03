@@ -1,0 +1,15 @@
+init model.Graph
+declare start and end nodes
+declare a list of distance to all nodes
+declare a list of unvisited nodes
+declare a map with shortest paths to all nodes: map(pathToNode, List<All nodes from start to this>)
+mark visited the start node
+
+while i have unvisited nodes
+    check distance to adjacent nodes of all visited nodes
+    if distance to node is not set, update with first value
+    if distance is already set, we don't update, we update only new nodes (total distance is the sum of shortest path to that node and last edge)
+    if an unvisited node is adjacent to multiple nodes, choose the shortest path/length from all possibilities
+    move to closest(currently known) unvisited node
+    mark node visited (remove from unvisited list)
+    add to path
